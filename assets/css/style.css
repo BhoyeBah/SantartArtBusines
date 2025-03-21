@@ -1,0 +1,292 @@
+:root{
+    --primary: #4A90E2;
+    --secondary: #2C3E50;
+    --white: #ffff;
+    --facebook:#1877F2;
+    --instagram:#E4405F;
+    --twitter:#1DA1F2;
+    --linkedin:#0077B5;
+}
+
+
+*{
+    margin: 0;padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    list-style: none;
+}
+
+/* html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;   
+} */
+
+.header{
+    right: 0;
+    left: 0;
+    top: 0;
+    background-color: var(--white);
+    position: fixed;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0, .1);
+    width: 100%;
+}
+
+
+/************** css header top start***********************/
+.header .header-top{
+    width: 100%;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    color: var(--white);
+}
+
+.header .header-top .info {
+    font-size: 14px;
+}
+
+
+.header .header-top .social-icons {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+
+.header .header-top .social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: var(--white);
+    border-radius: 50%;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.header .header-top .social-icons a i{
+    font-size: 1.3rem;
+    color: var(--secondary);
+}
+
+
+/***Hover start***/
+.header .header-top .social-icons a:hover i{
+    transition: color 0.3s ease;
+}
+
+/* Couleurs spécifiques par réseau social */
+.header .header-top .social-icons a.facebook:hover i {
+    color: var(--facebook); 
+}
+
+.header .header-top .social-icons a.instagram:hover i {
+    color: var(--instagram);
+}
+
+.header .header-top .social-icons a.twitter:hover i {
+    color: var(--twitter);
+}
+
+.header .header-top .social-icons a.linkedin:hover i {
+    color: var(--linkedin);
+}
+/***Hover start***/
+
+/************** css header top end***********************/
+
+
+
+
+/************** css header nav start***********************/
+.header .header-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 30px;
+}
+
+.header .header-nav img {
+    max-width: 100%;
+    height: auto;
+}
+
+.header .header-nav .navbar ul{
+    display: flex;
+    gap: 20px;
+}
+
+.header .header-nav .navbar ul li a {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    color: var(--secondary);
+    padding: 5px 10px;
+    font-weight: 600;
+    transition: color 0.3s ease;    
+    position: relative;
+}
+
+.header .header-nav .navbar-icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.header .header-nav .navbar-icons .cart{
+    position: relative;
+}
+.header .header-nav .navbar-icons .cart span{
+    position: absolute;
+    top: -26%;
+    left: 58px;
+    right: 0;
+}
+
+.menu-bars{
+    font-size: 2.5rem;
+    display: none;
+}
+.menu-bars a{
+    color: var(--secondary);
+}
+
+.menu-bars a:hover{
+    color: var(--primary);
+}
+
+
+.header .header-nav .navbar-icons a{
+    color: var(--secondary);
+    margin-left: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.header .header-nav .navbar-icons a:hover{
+    color: var(--primary);
+    transition: color 0.3s ease;
+}
+
+.header .header-nav .navbar li a::before,
+.header .header-nav .navbar li a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.header .navbar li a::before {
+    top: 0; 
+}
+
+.header .navbar li a::after {
+    bottom: 0; 
+}
+
+.header .navbar li a:hover::before,
+.header .navbar li a:hover::after {
+    transform: scaleX(1); /* Affiche les traits au survol */
+}
+
+.header .header-nav .navbar ul li a:hover{
+    color: var(--primary);
+}
+/************** css header nav end***********************/
+
+
+
+
+
+
+
+
+
+/* Responsive Styles media query start */
+
+@media (max-width: 991px){
+    /* html{
+        font-size: 55%; 
+    } */
+}
+
+@media (max-width: 768px){
+
+    .header .header-top {
+        padding: 10px 15px; 
+    }
+
+    .header .header-top .info {
+        font-size: 12px; 
+    }
+
+    .header .header-top .social-icons a {
+        width: 25px;
+        height: 25px;
+    }
+
+    .header .header-top .social-icons a i{
+        font-size: 1.1rem; 
+    }
+
+    .menu-bars{
+        font-size: 2.5rem;
+        display: block;
+    }
+
+    .header .header-nav .navbar ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--white);
+        border-top: .1rem solid rgba(0, 0, 0, 0.1);
+        display: none;
+        transform: translateY(-20px); /* Le menu commence un peu plus haut */
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+    }
+
+    .header .header-nav .navbar ul{
+        gap: 20px;
+        margin: 10px 0;
+    }
+
+    .navbar.show{
+        display: block;
+        opacity: 1;
+    transform: translateY(0); 
+    }
+     
+}
+
+@media (max-width: 450px){
+    /* html{
+        font-size: 50%; 
+    } */
+
+    .header .header-top {
+        padding: 5px 10px;
+    }
+    .header .header-top .info {
+        font-size: 10px; 
+    }
+}
