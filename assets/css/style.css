@@ -35,11 +35,38 @@ body{
     right: 0;
     left: 0;
     top: 0;
-    background-color: var(--white);
+    /* background-color: var(--white); */
+    background-color: rgba(255, 255, 255, 0.5); 
     position: fixed;
     z-index: 1000;
     box-shadow: 0 .5rem 1rem rgba(0,0,0, .1);
     width: 100%;
+    transition: background-color 600ms ease, box-shadow 600ms ease;
+}
+
+.header.scrolled {
+    background-color: var(--white); /* Fond opaque après le scroll */
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1); /* Ajout d'ombre */
+}
+
+.btn{
+    padding: 0.8rem 2rem;
+    border: 2px solid var(--primary);
+    border-radius: 2rem;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    background-color: var(--primary);
+    font-weight: 400;
+    color: var(--secondary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover{
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background-color: var(--secondary);
+    color: var(--white);
 }
 
 
@@ -58,13 +85,11 @@ body{
     font-size: 14px;
 }
 
-
 .header .header-top .social-icons {
     display: flex;
     gap: 5px;
     align-items: center;
 }
-
 
 .header .header-top .social-icons a {
     display: flex;
@@ -82,7 +107,6 @@ body{
     font-size: 1.3rem;
     color: var(--secondary);
 }
-
 
 /***Hover start***/
 .header .header-top .social-icons a:hover i{
@@ -211,6 +235,95 @@ body{
     color: var(--primary);
 }
 /************** css header nav end***********************/
+
+
+/*********css slide start*************************************/
+.swiper {
+    width: 100%;
+    height: 100vh;
+}
+
+.swiper .swiper-wrapper{
+    width: 100%;
+    height: 100%;
+}
+
+.swiper .swiper-wrapper .swiper-slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rebeccapurple;
+    width: 100%;
+}
+
+.swiper .swiper-wrapper .swiper-slide .image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper .swiper-wrapper .swiper-slide .slide-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+}
+
+.swiper .swiper-wrapper .swiper-slide .slide-content p {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 5px;
+    margin-bottom: 0.7rem;
+}
+
+.swiper .swiper-wrapper .swiper-slide .slide-content h1{
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.swiper .swiper-pagination-bullet{
+    width: 10px;
+    height: 10px;
+    background-color: var(--white);
+    opacity: 0.5s;
+    transition: 0.3s;
+}
+.swiper .swiper-pagination-bullet-active{
+    width: 20px;
+    border-radius: 7px;
+    opacity: 1;
+}
+
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next{
+    color: var(--white);
+}
+
+
+/*********css slide end*************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* css footer start  */
