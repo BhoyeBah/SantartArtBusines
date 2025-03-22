@@ -249,11 +249,11 @@ body{
 }
 
 .swiper .swiper-wrapper .swiper-slide{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: rebeccapurple;
     width: 100%;
 }
 
@@ -265,9 +265,9 @@ body{
 
 .swiper .swiper-wrapper .swiper-slide .slide-content{
     position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.3);
     width: 100%;
     height: 100%;
     display: flex;
@@ -275,6 +275,8 @@ body{
     align-items: center;
     justify-content: center;
     color: var(--white);
+    transform: translateY(0);
+    padding-top: 10%;
 }
 
 .swiper .swiper-wrapper .swiper-slide .slide-content p {
@@ -294,7 +296,7 @@ body{
 .swiper .swiper-pagination-bullet{
     width: 10px;
     height: 10px;
-    background-color: var(--white);
+    background-color: var(--primary);
     opacity: 0.5s;
     transition: 0.3s;
 }
@@ -307,6 +309,11 @@ body{
 .swiper .swiper-button-prev,
 .swiper .swiper-button-next{
     color: var(--white);
+    color: var(--white);
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    z-index: 10; 
 }
 
 
@@ -650,11 +657,35 @@ body{
         align-items: center;
         gap: 10px;
     }
+
     .footer-bottom p{
         font-size: 0.8rem;
         margin: 0;
     }
-     
+
+    
+    .swiper .swiper-wrapper .swiper-slide .slide-content{
+        padding-top: 35%;
+    }
+
+    .swiper .swiper-wrapper .swiper-slide .slide-content h1 {
+        font-size: 2rem; /* Réduire la taille du texte */
+    }
+
+    .swiper .swiper-wrapper .swiper-slide .slide-content p {
+        font-size: 0.9rem; /* Réduire la taille du texte */
+    }
+
+    .swiper .swiper-button-prev,
+    .swiper .swiper-button-next{
+        top: 60%;
+    }
+
+    .swiper .swiper-wrapper .swiper-slide .slide-content button {
+        font-size: 1rem;  /* Ajuster la taille du bouton */
+        padding: 0.8rem 1.2rem; /* Réduire légèrement le padding sur mobile */
+    }
+
 }
 
 @media (max-width: 450px){
@@ -668,4 +699,17 @@ body{
     .header .header-top .info {
         font-size: 10px; 
     }
+
+    .swiper {
+        height: 89vh;
+    }
+
+    .swiper .swiper-wrapper .swiper-slide .slide-content h1 {
+        font-size: 1.8rem; 
+    }
+    .swiper .swiper-wrapper .swiper-slide .slide-content p {
+        font-size: 0.8rem;
+    }
+
+
 }
