@@ -227,7 +227,7 @@ body{
     flex-wrap: wrap;
     gap: 1.5rem;
     justify-content: space-between;
-    padding:48px;
+    padding:48px 30px 48px;
     border-top: 1px solid var(--primary);
 }
 
@@ -238,7 +238,7 @@ body{
 
 
 .footer .footer-logo{
-    width: 150px;
+    width: 100px;
     height: auto;
 }
 
