@@ -18,6 +18,12 @@
     list-style: none;
 }
 
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 /* html{
     font-size: 62.5%;
     scroll-behavior: smooth;
@@ -207,6 +213,251 @@
 /************** css header nav end***********************/
 
 
+/* css footer start  */
+
+
+.footer{
+    margin-top: auto;
+}
+
+
+.footer .footer-container{
+    background-color: var(--white);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-between;
+    padding:48px;
+    border-top: 1px solid var(--primary);
+}
+
+.footer .footer-box {
+    flex: 1 1 30%; 
+    min-width: 250px; 
+}
+
+
+.footer .footer-logo{
+    width: 150px;
+    height: auto;
+}
+
+.footer .footer-box p {
+    font-size: 1rem;
+    color: var(--secondary);
+    margin: 0.5rem 0;
+    line-height: 1.6;
+    text-align: left;
+    padding: 1rem;
+}
+
+.footer .footer-box .footer-title{
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--secondary);
+    padding-bottom: 20px;
+    margin-bottom: 3rem;
+    text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+.footer .footer-box .footer-title::after{
+    content: "";
+    position: relative;
+    display: block;
+    bottom: -15px;
+    left: 0;
+    width: 60%;
+    height: 4px;
+    background-color: var(--secondary);
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+.footer .footer-box .btn-link{
+    display: block;
+    padding: 0;
+    font-size: 15px;
+    font-weight: normal;
+    transition: 0.3s;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+    color: var(--secondary);
+    font-style: italic;
+}
+
+.footer .footer-box .btn-link::before{
+    content:"\f30b";
+    margin-right: 10px;
+    font-family: "Font Awesome 6 Free"; 
+    font-weight: 900; 
+    margin-right: 10px;
+    color: var(--secondaire);
+    font-size: 17px;
+}
+
+.footer .btn-link:hover{
+    box-shadow: none;
+    box-shadow: none;
+    transform: translateX(10px);
+}
+
+.newsletter-form .input-group {
+    position: relative;
+    display: flex;
+    align-items: stretch; /* Assure que l'input et le bouton sont alignés */
+    width: 65%;
+    flex-wrap: nowrap; /* Empêche l'enroulement des éléments */
+}
+
+.input-group > .form-control {
+    position: relative;
+    flex: 1 1 auto; 
+    min-width: 0;
+    border-radius: 10px 0 0 10px;
+}
+
+.input-group-text, .form-control {
+    border: 1px solid var(--primary);
+    border-radius: 10px; 
+    padding: .375rem .75rem;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-clip: padding-box; 
+}
+
+.newsletter-form .input-group-text {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 0 10px 10px 0; /* Arrondi uniquement le côté droit de l'icône */
+    cursor: pointer;
+}
+
+.footer .footer-bottom {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: var(--primary);
+    padding: 2.5rem 1.5rem;
+    color: var(--white); 
+    flex-wrap: wrap;
+}
+
+
+/* css footer end  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -262,7 +513,7 @@
         border-top: .1rem solid rgba(0, 0, 0, 0.1);
         display: none;
         transform: translateY(-20px); /* Le menu commence un peu plus haut */
-    transition: opacity 0.3s ease, transform 0.3s ease; 
+        transition: opacity 0.3s ease, transform 0.3s ease; 
     }
 
     .header .header-nav .navbar ul{
@@ -273,7 +524,21 @@
     .navbar.show{
         display: block;
         opacity: 1;
-    transform: translateY(0); 
+        transform: translateY(0); 
+    }
+
+    .newsletter-form .input-group {
+        width: 100%;
+
+    .footer .footer-bottom{
+        padding: 1rem 1.5rem;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .footer-bottom p{
+        font-size: 0.8rem;
+        margin: 0;
     }
      
 }
