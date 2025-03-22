@@ -217,7 +217,7 @@ body{
 
 
 .footer{
-    margin-top: auto;
+    margin-top: 55%;
 }
 
 
@@ -530,7 +530,7 @@ body{
     .newsletter-form .input-group {
         width: 100%;
     }
-    
+
     .footer .footer-bottom{
         padding: 1rem 1.5rem;
         justify-content: center;
