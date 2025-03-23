@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-        speed: 600,  // Vitesse de transition
+        speed: 700,  // Vitesse de transition
         effect: 'fade',  // Ou 'fade' si tu préfères
     });
 });
