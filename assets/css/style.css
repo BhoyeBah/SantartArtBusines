@@ -791,7 +791,10 @@ section{
         font-size: 2rem;
     }
 
-
+    .product .container .box-product {
+        flex: 1 1 calc(50% - 2rem);
+        max-width: calc(50% - 2rem);
+    }
 }
 
 @media (max-width: 450px){
@@ -822,5 +825,10 @@ section{
     }
     .heading::after{
         width: 50%;
+    }
+
+    .product .container .box-product {
+        flex: 1 1 100%; /* Prend toute la largeur */
+        max-width: 100%; 
     }
 }
