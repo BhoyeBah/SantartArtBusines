@@ -49,6 +49,7 @@ body{
 }
 
 .heading{
+    position: relative;
     font-size: 2.5rem;
     text-align: center;
     color: var(--secondary);
@@ -57,6 +58,20 @@ body{
     /* background-color: rgba(74, 144, 226, 0.05); */
 }
 
+.heading:after {
+    content: "";
+    position: absolute;
+    width: 15%;
+    height: 3px;
+    background-color: var(--primary);
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+section{
+    padding: 2rem 9%;
+}
 
 .btn{
     padding: 0.8rem 2rem;
@@ -293,6 +308,7 @@ body{
     font-weight: 400;
     letter-spacing: 5px;
     margin-bottom: 0.7rem;
+    text-align: center;
 }
 
 .swiper .swiper-wrapper .swiper-slide .slide-content h1{
@@ -332,8 +348,15 @@ body{
 /*********css slide end*************************************/
 
 /*********css about start***********************************/
-section{
-    padding: 2rem 9%;
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about p {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--secondary);
 }
 
 .about .container {
@@ -361,15 +384,19 @@ section{
 
 .about .container .about-content {
     flex: 1 1 30rem;  
+    align-self: stretch;
+    padding-top: 1rem;
 }
 
 .about .container .about-content p {
-    font-size: 1.3rem;
-    color: var(--secondary);
-    padding: 1.5rem 0;
     padding-top: 1rem;
     line-height: 1.5;
+    text-align: left;
+    font-size: 1rem;
+    color: var(--secondary);
 }
+
+
 /*********css about end*************************************/
 
 
@@ -723,7 +750,7 @@ section{
     }
 
     .swiper .swiper-wrapper .swiper-slide .slide-content h1 {
-        font-size: 2rem; /* Réduire la taille du texte */
+        font-size: 2rem; 
     }
 
     .swiper .swiper-wrapper .swiper-slide .slide-content p {
@@ -764,11 +791,16 @@ section{
     }
 
     .swiper .swiper-wrapper .swiper-slide .slide-content h1 {
-        font-size: 1.8rem; 
+        font-size: 1.5rem; 
     }
     .swiper .swiper-wrapper .swiper-slide .slide-content p {
         font-size: 0.8rem;
     }
 
-
+    .heading{
+        font-size: 1.8rem;
+    }
+    .heading::after{
+        width: 50%;
+    }
 }
