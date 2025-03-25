@@ -413,12 +413,45 @@ section{
 
 .product .container .box-product{
     text-align: center;
-    padding: 1rem;
     border: 2px solid black;
-    flex: 1 1 calc(33% - 2rem);
-    max-width: calc(33.33% - 2rem);
+    flex: 1 1 calc(25% - 2rem);
+    max-width: calc(25% - 2rem);
+    box-sizing: border-box;
 }
 
+.product .container .box-product .image{
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.product .container .box-product .image img{
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.product .container .box-product .image h3 {
+    margin: 0.8rem 0;
+}
+
+.product .container .box-product .image h3 a {
+    color: var(--secondary);
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+.product .container .box-product .btn-buy{
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center; 
+    transition: background-color 0.4s ease-in-out; 
+    cursor: pointer;
+}
+
+.product .container .box-product .btn-buy:hover{
+    background-color: var(--primary);
+    color: var(--white);
+}
 
 /* css product end   */
 
@@ -792,8 +825,8 @@ section{
     }
 
     .product .container .box-product {
-        flex: 1 1 calc(50% - 2rem);
-        max-width: calc(50% - 2rem);
+        flex: 1 1 calc(33.33% - 2rem);
+        max-width: calc(33.33% - 2rem);
     }
 }
 
