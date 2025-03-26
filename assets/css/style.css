@@ -404,40 +404,70 @@ section{
 /* css product start  */
 .product .container{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 2rem;
     padding: 2rem;
-    flex-wrap: wrap;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.product p{
+    text-align: center;
+    font-size: 1rem;
+    color: var(--secondary);
+    margin-bottom: 1rem;
 }
 
 .product .container .box-product{
     text-align: center;
-    border: 2px solid black;
+    box-shadow: 0px 0px 3px var(--primary);
     flex: 1 1 calc(25% - 2rem);
     max-width: calc(25% - 2rem);
     box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.product .container .box-product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .product .container .box-product .image{
     overflow: hidden;
-    box-sizing: border-box;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: var(--white);
 }
 
 .product .container .box-product .image img{
     max-width: 100%;
-    height: auto;
-    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-.product .container .box-product .image h3 {
-    margin: 0.8rem 0;
+.product .container .box-product:hover .image img {
+    transform: scale(1.05);
 }
+
 
 .product .container .box-product .image h3 a {
     color: var(--secondary);
     font-size: 1.2rem;
     font-weight: normal;
+}
+
+.product .container .box-product .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    color: var(--primary);
 }
 
 .product .container .box-product .btn-buy{
@@ -450,15 +480,59 @@ section{
 
 .product .container .box-product .btn-buy:hover{
     background-color: var(--primary);
+    transition: 0.4s ease;
     color: var(--white);
 }
 
 /* css product end   */
 
+/* css blog start   */
+.blog p{
+    font-size: 1rem;
+    color: var(--secondary);
+    text-align: center;
+    line-height: 1.5;
+}
+/* css blog end   */
 
+/****** CSS GALERY****************/
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
 
+.gallery p {
+    color: var(--secondary);
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
 
+/* Images */
+.gallery-grid a {
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
 
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Effet zoom au survol */
+.gallery-grid a:hover {
+  transform: scale(1.05);
+}
 
 
 
