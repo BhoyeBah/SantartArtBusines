@@ -497,7 +497,8 @@ section{
     border-radius: 10px;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    width: calc(33.33% - 2rem);
+    flex:1 1 calc(33.33% - 2rem);
+    max-width: calc(33.33% - 2rem);
     box-sizing: border-box;
 }
 
@@ -966,6 +967,12 @@ section{
         flex: 1 1 calc(33.33% - 2rem);
         max-width: calc(33.33% - 2rem);
     }
+
+    .blog .container .card {
+        flex:1 1 calc(50% - 2rem);
+        max-width: calc(50% - 2rem);
+    }
+
 }
 
 @media (max-width: 450px){
@@ -994,11 +1001,17 @@ section{
     .heading{
         font-size: 1.8rem;
     }
+    
     .heading::after{
         width: 50%;
     }
 
     .product .container .box-product {
+        flex: 1 1 100%; /* Prend toute la largeur */
+        max-width: 100%; 
+    }
+
+    .blog .container .card {
         flex: 1 1 100%; /* Prend toute la largeur */
         max-width: 100%; 
     }
