@@ -1,23 +1,26 @@
 document.addEventListener("DOMContentLoaded", function() {
     const header = document.querySelector('.header');
-    
-    // Fonction pour vérifier si le header doit avoir la classe "scrolled"
+    const menuToggle = document.getElementById('menu-toggle');
+    const navbar = document.querySelector('.navbar');
     function checkScroll() {
-        if (window.scrollY > 50) { // Si l'utilisateur a défilé de plus de 50px
-            header.classList.add('scrolled');
+        if (window.scrollY > 50) { 
+            header.classList.add('scrolled');          
+            navbar.classList.add('scrolled');  
         } else {
-            header.classList.remove('scrolled');
+            header.classList.remove('scrolled');            
+            navbar.classList.remove('scrolled');
+        }
+
+        if (navbar.classList.contains('show')) {
+            navbar.classList.remove('show');
+            menuToggle.classList.remove('fa-times');
+            menuToggle.classList.add('fa-bars');
         }
     }
 
-    // Vérifie l'état du défilement au chargement initial
     checkScroll();
-
-    // Ajoute un événement de défilement
     window.addEventListener('scroll', checkScroll);
-    // Menu toggle
-    const menuToggle = document.getElementById('menu-toggle');
-    const navbar = document.querySelector('.navbar');
+
 
     menuToggle.addEventListener('click', () => {
         navbar.classList.toggle('show');

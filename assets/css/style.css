@@ -495,7 +495,8 @@ section{
 
 .blog .container .card {
     border-radius: 10px;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2); */
+    box-shadow: 0 0 3px rgba(74, 144, 226, 0.5);
     overflow: hidden;
     flex:1 1 calc(33.33% - 2rem);
     max-width: calc(33.33% - 2rem);
@@ -578,7 +579,8 @@ section{
     flex:1 1 calc(25.33% - 2rem);
     max-width: calc(25.33% - 2rem);
     box-sizing: border-box;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 3px rgba(74, 144, 226, 0.5);
+    
 }
 
 .our-team .pic {
@@ -1003,6 +1005,12 @@ section{
         display: block;
         opacity: 1;
         transform: translateY(0); 
+       background-color: rgba(255, 255, 255, 0.5); 
+    }
+
+     .navbar.scrolled {
+        background-color: var(--white);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
     }
 
     .newsletter-form .input-group {
