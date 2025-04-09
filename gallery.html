@@ -57,7 +57,7 @@
     </header>
     <!-- header end-->
 
-    
+
     <section class="page-header">
         <div class="container">
             <h1 class="page-title">Titre de la Page</h1>
@@ -74,7 +74,119 @@
                         Détails du Magasin
                     </li> -->
                 </ul>
-                
+
             </nav>
         </div>
     </section>
+
+
+    <section class="gallery" id="gallery">
+        <h1 class="heading">Notre Galérie</h1>
+        <p class="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi rerum nobis ipsa
+            reiciendis consequuntur
+            fugiat voluptate</p>
+
+        <div class="gallery-grid">
+            <a data-fancybox="gallery" href="https://lipsum.app/id/60/1200x800">
+                <img src="https://lipsum.app/id/60/400x300" alt="Image 1">
+            </a>
+            <a data-fancybox="gallery" href="https://lipsum.app/id/61/1200x800">
+                <img src="https://lipsum.app/id/61/400x300" alt="Image 2">
+            </a>
+            <a data-fancybox="gallery" href="https://lipsum.app/id/62/1200x800">
+                <img src="https://lipsum.app/id/62/400x300" alt="Image 3">
+            </a>
+            <a data-fancybox="gallery" href="https://lipsum.app/id/63/1200x800">
+                <img src="https://lipsum.app/id/63/400x300" alt="Image 4">
+            </a>
+            <a data-fancybox="gallery" href="https://lipsum.app/id/64/1200x800">
+                <img src="https://lipsum.app/id/64/400x300" alt="Image 5">
+            </a>
+            <a data-fancybox="gallery" href="https://lipsum.app/id/65/1200x800">
+                <img src="https://lipsum.app/id/65/400x300" alt="Image 6">
+            </a>
+        </div>
+
+    </section>
+
+        
+    <!-- footer start  -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-box">
+                <img src="assets/images/santart.png" alt="santartbusiness" class="footer-logo">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Numquam non hic atque corporis soluta quis quibusdam delectus voluptate aliquid.
+                </p>
+            </div>
+            <div class="footer-box">
+                <h3 class="footer-title">Liens rapides</h3>
+                <ul>
+                    <li>
+                        <a href="#" class="btn-link">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="#" class="btn-link">À propos</a>
+                    </li>
+                    <li>
+                        <a href="#" class="btn-link">Produits</a>
+                    </li>
+                    <li>
+                        <a href="#" class="btn-link">Événements</a>
+                    </li>
+                    <li>
+                        <a href="#" class="btn-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h3 class="footer-title">Newsletter</h3>
+                <p>Abonnez-vous pour recevoir nos dernières actualités et offres spéciales.</p>
+                <form action="#" class="newsletter-form">
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Votre email" required
+                            aria-label="Votre email" aria-describedby="email">
+                        <span class="input-group-text" id="email">
+                            <i class="fa fa-paper-plane"></i>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="left">
+                <p>
+                    &copy; 2025 Santart'Art-Business, Tout droits réservés.
+                </p>
+            </div>
+            <div class="right">
+                <p>
+                    Design by Bhoye
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end  -->
+
+
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+        Fancybox.bind('[data-fancybox="gallery"]', {
+            // Options pour les fonctionnalités de Fancybox
+            loop: true, // Permet de revenir au début lorsque vous atteignez la dernière image
+            arrows: true, // Affiche les flèches de navigation
+            toolbar: true, // Affiche la barre d'outils
+            infinite: true, // Permet à la galerie de boucler indéfiniment
+            Thumbs: {
+                autoStart: true, // Démarre les vignettes
+            },
+        });
+    </script>
+</body>
+
+</html>
+</body>
+
+</html>
