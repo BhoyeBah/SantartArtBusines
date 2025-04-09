@@ -845,7 +845,7 @@ section{
     border-radius: 50px;
     transition: all 0.3s ease-in-out;
     margin-right: 15px;
-        transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .contact .container .info-item i:hover{
