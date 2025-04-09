@@ -792,6 +792,126 @@ section{
 }
 
 
+/****** css page contact ***/
+
+.contact .section-title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.contact .section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--secondary);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contact .section-title p {
+    font-size: 16px;
+    color: #666;
+}
+
+.contact .container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.contact .container > .contact-info,
+.contact .container > .contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact .container .contact-info{
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    padding: 30px;
+}
+
+.contact .container .info-item{
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.contact .container .info-item i {
+    font-size: 20px;
+    color: var(--primary);
+    background: color-mix(in srgb, var(--primary) , transparent 92%);
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    margin-right: 15px;
+}
+
+.contact .container .contact-form {
+    flex: 1;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.contact .container .contact-form .form-row{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact .container .contact-form .form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.contact .container .contact-form .half-width{
+    flex: 1;
+    min-width: 200px;
+}
+
+.contact .container .contact-form .form-group label {
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+
+.contact .container .contact-form .form-group input,
+.contact .container .contact-form .form-group textarea{
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+
+.contact .container .contact-form .form-group input:focus,
+.contact .container .contact-form .form-group textarea:focus{
+    border: 1px solid var(--primary);
+}
+
+.submit-btn button[type=submit] {
+    color: var(--white);
+    background: var(--primary);
+    border: 0;
+    padding: 10px 30px;
+    transition: 0.4s;
+    border-radius: 50px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .submit-btn button:hover {
+    background-color: var(--secondary);
+  }
+/****** end css page contact **/
+
+
+
 
 
 
