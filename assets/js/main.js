@@ -1,14 +1,20 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
+    // Initiate the wowjs
+    new WOW().init();
+    console.log("Page chargée !");
+    if (typeof WOW !== "undefined") {
+        console.log("WOW.js est chargé !");
+        new WOW().init();
+    } else {
+        console.error("WOW.js n’est PAS chargé !");
+    }
     const header = document.querySelector('.header');
     const menuToggle = document.getElementById('menu-toggle');
     const navbar = document.querySelector('.navbar');
     function checkScroll() {
-        if (window.scrollY > 50) { 
-            header.classList.add('scrolled');          
-            navbar.classList.add('scrolled');  
-        } else {
-            header.classList.remove('scrolled');            
-            navbar.classList.remove('scrolled');
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+            navbar.classList.add('scrolled');
         }
 
         if (navbar.classList.contains('show')) {
